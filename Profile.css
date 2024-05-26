@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px;
+  height: auto;
+}
+
+.header h1 {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #333;
+  flex-shrink: 0; /* 防止 h1 元素缩小以适应剩余空间 */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container img.fir {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.container .center {
+  margin-bottom: 20px;
+}
+
+.container .center p {
+  font-size: 18px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.container hr {
+  margin: 20px 0;
+}
+
+.container ul {
+  padding: 0;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.container ul li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.container ul li a,
+.container ul li label {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+}
+
+.container ul li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* New navigation styles */
+/* 导航样式 */
+.nav ul {
+  display: flex;
+  justify-content: space-between; /* 让 li 元素平分 nav 的宽度 */
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.nav ul li {
+  flex: 1; /* 让每个 li 元素平分空间 */
+  justify-content: center; /* 水平居中 */
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.nav ul li a {
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+
+.nav ul li:hover {
+  background-color: #dcdcdc;
+}
+
+.footer ul li:hover {
+  background-color: #dcdcdc;
+}

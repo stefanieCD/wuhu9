@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  }
+  li {
+    list-style: none;
+  }
+  .container {
+    max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .header .back-button {
+    font-size: 18px;
+    color: #5578F2;
+    text-decoration: none;
+  }
+  .content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .content .checkmark-icon {
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    margin-bottom: 20px;
+  }
+  .content h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .content p {
+    font-size: 18px;
+    color: #555;
+  }
+  .footer-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .footer-buttons .first-bt,
+  .footer-buttons .second-bt {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5578F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .footer-buttons .second-bt {
+    background-color: #d9534f;
+  }
+  .footer-buttons .first-bt:hover {
+    background-color: #4058a4;
+
+  }
+  .footer-buttons .second-bt:hover {
+    background-color: #c9302c;
+  }
+  
+  /* New navigation styles */
+  .nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    margin: 20px 0;
+  }
+  
+  .nav ul li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .nav ul li:hover {
+    background-color: #dcdcdc;
+  }
+  
+  

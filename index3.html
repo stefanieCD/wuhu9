@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>停车计时器</title>
+    <link rel="stylesheet" href="./css/index3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top banxin">
+            <a href="./index2.html"><img src="./img/箭头.png" alt="箭头"></a>
+            <h1>停车计时器</h1>
+        </div>
+
+        <div class="djs banxin">
+            <div id="countdown">00 : 30 : 00</div>
+        </div>
+
+        <div class="par banxin">
+            <p>停车区域 <span>芜湖火车站地下停车场</span></p>
+            <p>地址 <span>芜湖火车站负一楼</span></p>
+            <p>车辆 <span>福特f系列(AF 4793 JU)</span></p>
+            <p>停车点 <span>一楼(A05)</span></p>
+            <p>日期 <span>2024, 12, 16</span></p>
+            <p>持续时间 <span>4 hours</span></p>
+            <p>时长 <span>09.00 上午 - 13.00 下午</span></p>
+        </div>
+
+        <div class="con banxin">
+            <a href="./index4.html">延长停车时间</a>
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            var countdown = document.getElementById("countdown");
+            var time = 1800;
+            
+            setInterval(function() {
+                time -= 1;
+                var minute = parseInt(time / 60);
+                var second = parseInt(time % 60);
+                countdown.innerHTML = '00 : ' + (minute < 10 ? '0' + minute : minute) + ' : ' + (second < 10 ? '0' + second : second);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

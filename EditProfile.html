@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>配置文件输入框</title>
+  <link rel="stylesheet" href="EditProfile.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="Profile.html"><img src="./img/箭头.png" alt="返回"></a>
+      <h1>编辑个人资料</h1>
+  </div>
+   
+    <form action="#">
+      <input type="text" placeholder="姓名" id="name"><br><br>
+      <input type="text" placeholder="用户名" id="username"><br><br>
+      <select name="gender" id="gender">
+        <option value="Male">男性</option>
+        <option value="Female">女性</option>
+        <!-- 其他性别选项 -->
+      </select><br><br>
+      <input type="date" placeholder="出生年月日" id="dob"><br><br>
+      <select name="country" id="country" onchange="populateStates(this.value)">
+        <option value="">请选择国家</option>
+        <option value="China">中国</option>
+        <!-- 其他国家选项 -->
+       </select><br><br>
+    
+      <select name="state" id="state" onchange="populateCities(this.value)">
+          <option value="">请选择省份</option>
+          <!-- 省份选项会在国家选择后通过 JavaScript 动态填充 -->
+      </select><br><br>
+    
+      <select name="city" id="city">
+          <option value="">请选择城市</option>
+          <!-- 城市选项会在省份选择后通过 JavaScript 动态填充 -->
+      </select><br><br>
+    
+      <script>
+          function populateStates(country) {
+              var stateDropdown = document.getElementById("state");
+              // 清空现有选项
+              stateDropdown.innerHTML = '<option value="">请选择省份</option>';
+      
+              if (country === "China") {
+                  // 如果选择的是中国，填充中国的省份选项
+                  var states = ["北京", "上海", "广东", "江苏", "浙江", "四川", "湖北", "河南", "湖南", "福建", "安徽", "辽宁", "重庆", "山东", "河北", "陕西", "云南", "黑龙江", "广西", "贵州", "山西", "天津", "江西", "吉林", "新疆", "甘肃", "海南", "宁夏", "青海", "西藏"];
+                  for (var i = 0; i < states.length; i++) {
+                      var option = document.createElement("option");
+                      option.text = states[i];
+                      option.value = states[i];
+                      stateDropdown.add(option);
+                  }
+              }
+              // 如果选择其他国家，可以在此处添加对应的省份选项填充逻辑
+          }
+      
+          function populateCities(state) {
+              var cityDropdown = document.getElementById("city");
+              // 清空现有选项
+              cityDropdown.innerHTML = '<option value="">请选择城市</option>';
+      
+              if (state === "安徽") {
+                  // 如果选择的是北京，填充北京的城市选项
+                  var cities = ["芜湖市"];
+                  for (var i = 0; i < cities.length; i++) {
+                      var option = document.createElement("option");
+                      option.text = cities[i];
+                      option.value = cities[i];
+                      cityDropdown.add(option);
+                  }
+              }
+              // 如果选择其他省份，可以在此处添加对应的城市选项填充逻辑
+          }
+      </script>
+    
+      <input type="tel" placeholder="电话号码" id="phone"><br><br>
+      <input type="email" placeholder="邮箱地址" id="email"><br><br>
+    </form>
+
+    <button type="submit" class="btn">更新</button>
+  </div>
+</body>
+
+</html>

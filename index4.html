@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约停车场细节</title>
+    <link rel="stylesheet" href="./css/index4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top banxin">
+            <a href="./index3.html"><img src="./img/箭头.png" alt="返回"></a>
+            <h1>预约停车场细节</h1>
+        </div>
+        <div class="section banxin">
+            <h3>选择日期</h3>
+            <div class="rl">
+                <h3>2024.12 <span class="arrow">&gt;</span><span class="arrow">&lt;</span></h3>
+                <ul>
+                    <li>星期一</li>
+                    <li>星期二</li>
+                    <li>星期三</li>
+                    <li>星期四</li>
+                    <li>星期五</li>
+                    <li>星期六</li>
+                    <li>星期日</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section banxin">
+            <h3>持续时间</h3>
+            <div class="xian"></div>
+            <div class="xs"><div class="xs1"></div></div>
+        </div>
+
+        <div class="section banxin">
+            <h3>开始时间 <span>结束时间</span></h3>
+            <div class="he">
+                <input type="text" class="z1"> 上午
+                <img src="./img/时钟.png" alt="时钟" class="img1">
+            </div>
+            <div class="he">
+                <img src="./img/右箭头.png" alt="箭头" class="img">
+            </div>
+            <div class="he">
+                <input type="text" class="z2"> 下午
+                <img src="./img/时钟.png" alt="时钟" class="img1">
+            </div>
+        </div>
+
+        <div class="section To banxin">
+            <h3>总共</h3>
+            <p>8元<span>/4 小时</span></p>
+        </div>
+
+        <div class="con banxin">
+            <button>继续</button>
+        </div>
+    </div>
+
+    <script>
+        let z1 = document.querySelector('.z1');
+        let z2 = document.querySelector('.z2');
+        let xs = document.querySelector('.xs1');
+        let con = document.querySelector('.con button');
+        con.addEventListener('click', function() {
+            if (z1.value && z2.value) {
+                xs.innerHTML = Number(parseInt(z1.value)) - Number(parseInt(z2.value)) + 'hrs';
+            } else {
+                alert('请在两端输入数据');
+            }
+        });
+    </script>
+</body>
+</html>

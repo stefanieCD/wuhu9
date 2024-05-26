@@ -1,0 +1,169 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 顶部样式 */
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top img {
+  width: 50px;
+  height: auto;
+}
+
+.top h1 {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* 车图片样式 */
+.che img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* 停车场信息样式 */
+.par h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.par span {
+  display: block;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.box div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.nr h1 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.nr p {
+  margin: 10px 0;
+  color: #777;
+}
+
+.nr a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nr a:hover {
+  text-decoration: underline;
+}
+
+.qian {
+  font-size: 24px;
+  color: red;
+  margin: 10px 0;
+}
+
+/* 按钮样式 */
+.an ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.an ul li {
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.an ul li:hover {
+  background-color: #0056b3;
+}
+
+.an ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 导航样式 */
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.nav ul li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.nav ul li:hover {
+  background-color: #dcdcdc;
+}
+
+/* 响应式布局 */
+@media (min-width: 768px) {
+  .box {
+      flex-direction: row;
+  }
+
+  .an ul {
+      flex-direction: row;
+  }
+
+  .nav ul {
+      flex-direction: row;
+  }
+}
